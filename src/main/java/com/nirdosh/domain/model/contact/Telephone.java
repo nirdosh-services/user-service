@@ -2,25 +2,7 @@ package com.nirdosh.domain.model.contact;
 
 public class Telephone {
 
-    private String number;
+    public String number;
 
-    private TelephoneType telephoneType;
-
-    public String getNumber() {
-        return number;
-    }
-
-    public void setNumber(String number) {
-        this.number = number;
-    }
-
-    public TelephoneType getTelephoneType() {
-        return telephoneType;
-    }
-
-    public void setTelephoneType(TelephoneType telephoneType) {
-        this.telephoneType = telephoneType;
-    }
-
-
+    public TelephoneType telephoneType;
 }
