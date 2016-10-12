@@ -28,4 +28,9 @@ public class DevoteeController {
     public List<Devotee> getAllDevotee() {
         return devoteeRepo.findAll();
     }
+
+    @RequestMapping(value = "/devotee", method = RequestMethod.DELETE)
+    public void deleteDevotee(@PathVariable String id){
+        devoteeRepo.delete(id);
+    }
 }
