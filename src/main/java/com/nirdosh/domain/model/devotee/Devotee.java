@@ -13,7 +13,7 @@ import java.util.List;
 public class Devotee {
 
     @Id
-    private String id;
+    public String id;
 
     public ContactInfo contactInfo;
 
