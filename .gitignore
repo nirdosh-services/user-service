@@ -1,6 +1,4 @@
 .mvn
-!target/*.jar
-target/
 ### STS ###
 .classpath
 .factorypath
