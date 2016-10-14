@@ -1,4 +1,4 @@
-!.mvn/wrapper/maven-wrapper.jar
+.mvn
 
 ### STS ###
 .classpath
@@ -12,13 +12,3 @@
 *.iws
 *.iml
 *.ipr
-
-### NetBeans ###
-nbproject/private/
-build/
-nbbuild/
-dist/
-nbdist/
-.nb-gradle/
-/.mvn/
-/target/
