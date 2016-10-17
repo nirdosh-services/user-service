@@ -1,7 +1,7 @@
 FROM java
 
-#COPY ./target/devotee-service.jar /usr/src/myapp
+COPY target/devotee-service.jar /
 
-#WORKDIR /usr/src/myapp
+EXPOSE 8080
 
-#CMD ["java","-jar","devotee-service.jar"]
+CMD ["java","-jar","devotee-service.jar"]
