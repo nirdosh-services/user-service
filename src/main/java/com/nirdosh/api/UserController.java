@@ -14,23 +14,23 @@ public class UserController {
     @Autowired
     private UserRepo userRepo;
 
-    @RequestMapping("/devotee/{id}")
+    @RequestMapping("/user/{id}")
     @ResponseBody
     public User getDevotee(@PathVariable String id) {
         return userRepo.findOne(id);
     }
 
-    @RequestMapping(name = "/devotee", method = RequestMethod.POST)
+    @RequestMapping(name = "/user", method = RequestMethod.POST)
     public void addDevotee() {
         userRepo.save(new User());
     }
 
-    @RequestMapping("/devotee")
+    @RequestMapping("/user")
     public List<User> getAllDevotee() {
         return userRepo.findAll();
     }
 
-    @RequestMapping(value = "/devotee", method = RequestMethod.DELETE)
+    @RequestMapping(value = "/user", method = RequestMethod.DELETE)
     public void deleteDevotee(@PathVariable String id){
         userRepo.delete(id);
     }
