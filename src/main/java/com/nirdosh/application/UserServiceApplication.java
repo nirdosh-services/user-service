@@ -21,7 +21,7 @@ import java.util.stream.IntStream;
 
 @SpringBootApplication
 @ComponentScan("com.nirdosh")
-@EnableMongoRepositories("com.nirdosh.infrastructure.persistence")
+@EnableMongoRepositories("com.nirdosh.domain.model")
 public class UserServiceApplication implements CommandLineRunner{
 
 	@Autowired
