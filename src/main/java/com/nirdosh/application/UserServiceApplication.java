@@ -4,11 +4,11 @@ import com.nirdosh.domain.model.contact.BasicInfo;
 import com.nirdosh.domain.model.contact.ContactInfo;
 import com.nirdosh.domain.model.contact.Gender;
 import com.nirdosh.domain.model.contact.Name;
-import com.nirdosh.domain.model.devotee.Devotee;
+import com.nirdosh.domain.model.user.User;
 import com.nirdosh.domain.model.ftp.FtpAccount;
 import com.nirdosh.domain.model.payment.PaymentInfo;
 import com.nirdosh.domain.model.transportation.TransportInfo;
-import com.nirdosh.infrastructure.persistence.DevoteeRepo;
+import com.nirdosh.domain.model.user.UserRepo;
 import org.joda.time.DateTime;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
@@ -22,26 +22,26 @@ import java.util.stream.IntStream;
 @SpringBootApplication
 @ComponentScan("com.nirdosh")
 @EnableMongoRepositories("com.nirdosh.infrastructure.persistence")
-public class DevoteeServiceApplication implements CommandLineRunner{
+public class UserServiceApplication implements CommandLineRunner{
 
 	@Autowired
-	private DevoteeRepo devoteeRepo;
+	private UserRepo userRepo;
 
 	public static void main(String[] args) {
-		SpringApplication.run(DevoteeServiceApplication.class, args);
+		SpringApplication.run(UserServiceApplication.class, args);
 	}
 
 	@Override
 	public void run(String... strings) throws Exception {
-		devoteeRepo.deleteAll();
+		userRepo.deleteAll();
 		IntStream.range(1, 10).forEach(p -> {
-					Devotee devotee = new Devotee();
-					devotee.contactInfo(getContactInfo());
-					devotee.transport(getTransportInfo());
-					devotee.ftpAccount(getFtpAccount());
-					devotee.payment(getPaymentInfo());
+					User user = new User();
+					user.contactInfo(getContactInfo());
+					user.transport(getTransportInfo());
+					user.ftpAccount(getFtpAccount());
+					user.payment(getPaymentInfo());
 
-					devoteeRepo.save(devotee);
+					userRepo.save(user);
 				}
 		);
 	}

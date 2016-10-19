@@ -1,7 +1,7 @@
 FROM java
 
-COPY target/devotee-service.jar /
+COPY target/user-service.jar /
 
 EXPOSE 8080
 
-CMD ["java","-jar","devotee-service.jar"]
+CMD ["java","-jar","user-service.jar"]

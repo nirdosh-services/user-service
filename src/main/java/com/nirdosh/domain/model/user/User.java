@@ -1,4 +1,4 @@
-package com.nirdosh.domain.model.devotee;
+package com.nirdosh.domain.model.user;
 
 import com.nirdosh.domain.model.contact.ContactInfo;
 import com.nirdosh.domain.model.ftp.FtpAccount;
@@ -10,7 +10,7 @@ import org.springframework.data.annotation.Id;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Devotee {
+public class User {
 
     @Id
     public String id;
@@ -28,12 +28,12 @@ public class Devotee {
         return ToStringBuilder.reflectionToString(this).toString();
     }
 
-    public Devotee contactInfo(ContactInfo contactInfo) {
+    public User contactInfo(ContactInfo contactInfo) {
         this.contactInfo = contactInfo;
         return this;
     }
 
-    public Devotee ftpAccount(FtpAccount ftpAccount) {
+    public User ftpAccount(FtpAccount ftpAccount) {
         if (ftpAccounts == null) {
             ftpAccounts = new ArrayList<FtpAccount>();
         }
@@ -41,12 +41,12 @@ public class Devotee {
         return this;
     }
 
-    public Devotee transport(TransportInfo transportInfo){
+    public User transport(TransportInfo transportInfo){
         this.transportInfo = transportInfo;
         return this;
     }
 
-    public Devotee payment(PaymentInfo paymentInfo){
+    public User payment(PaymentInfo paymentInfo){
         this.paymentInfo = paymentInfo;
         return this;
     }

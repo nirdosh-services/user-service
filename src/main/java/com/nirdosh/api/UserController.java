@@ -1,7 +1,7 @@
 package com.nirdosh.api;
 
-import com.nirdosh.domain.model.devotee.Devotee;
-import com.nirdosh.infrastructure.persistence.DevoteeRepo;
+import com.nirdosh.domain.model.user.User;
+import com.nirdosh.domain.model.user.UserRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -9,29 +9,29 @@ import java.util.List;
 
 @RestController
 @CrossOrigin
-public class DevoteeController {
+public class UserController {
 
     @Autowired
-    private DevoteeRepo devoteeRepo;
+    private UserRepo userRepo;
 
     @RequestMapping("/devotee/{id}")
     @ResponseBody
-    public Devotee getDevotee(@PathVariable String id) {
-        return devoteeRepo.findOne(id);
+    public User getDevotee(@PathVariable String id) {
+        return userRepo.findOne(id);
     }
 
     @RequestMapping(name = "/devotee", method = RequestMethod.POST)
     public void addDevotee() {
-        devoteeRepo.save(new Devotee());
+        userRepo.save(new User());
     }
 
     @RequestMapping("/devotee")
-    public List<Devotee> getAllDevotee() {
-        return devoteeRepo.findAll();
+    public List<User> getAllDevotee() {
+        return userRepo.findAll();
     }
 
     @RequestMapping(value = "/devotee", method = RequestMethod.DELETE)
     public void deleteDevotee(@PathVariable String id){
-        devoteeRepo.delete(id);
+        userRepo.delete(id);
     }
 }
