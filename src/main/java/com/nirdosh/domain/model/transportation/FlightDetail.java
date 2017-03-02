@@ -5,85 +5,22 @@ import org.springframework.format.annotation.DateTimeFormat;
 
 public class FlightDetail {
 
-    @DateTimeFormat(pattern="dd/MM/yyyy HH:mm")
-    private DateTime departureDate;
+    @DateTimeFormat(pattern = "dd/MM/yyyy HH:mm")
+    public DateTime departureDate;
 
-    @DateTimeFormat(pattern="dd/MM/yyyy HH:mm")
-    private DateTime arrivalDate;
+    @DateTimeFormat(pattern = "dd/MM/yyyy HH:mm")
+    public DateTime arrivalDate;
 
-    private FlightType flightType;
+    public FlightType flightType;
 
-    private String from;
+    public String from;
 
-    private String to;
+    public String to;
 
-    private String airline;
+    public String airline;
 
-    private String flightNumber;
+    public String flightNumber;
 
-    private String seatNo;
+    public String seatNo;
 
-    public DateTime getDepartureDate() {
-        return departureDate;
-    }
-
-    public void setDepartureDate(DateTime departureDate) {
-        this.departureDate = departureDate;
-    }
-
-    public DateTime getArrivalDate() {
-        return arrivalDate;
-    }
-
-    public void setArrivalDate(DateTime arrivalDate) {
-        this.arrivalDate = arrivalDate;
-    }
-
-    public FlightType getFlightType() {
-        return flightType;
-    }
-
-    public void setFlightType(FlightType flightType) {
-        this.flightType = flightType;
-    }
-
-    public String getFrom() {
-        return from;
-    }
-
-    public void setFrom(String from) {
-        this.from = from;
-    }
-
-    public String getTo() {
-        return to;
-    }
-
-    public void setTo(String to) {
-        this.to = to;
-    }
-
-    public String getAirline() {
-        return airline;
-    }
-
-    public void setAirline(String airline) {
-        this.airline = airline;
-    }
-
-    public String getFlightNumber() {
-        return flightNumber;
-    }
-
-    public void setFlightNumber(String flightNumber) {
-        this.flightNumber = flightNumber;
-    }
-
-    public String getSeatNo() {
-        return seatNo;
-    }
-
-    public void setSeatNo(String seatNo) {
-        this.seatNo = seatNo;
-    }
 }
