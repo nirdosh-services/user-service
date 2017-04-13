@@ -4,9 +4,9 @@ import org.springframework.stereotype.Component;
 
 @Component
 public class ItineraryFactory {
-    private final FlightDetailsMother flightDetailsMother;
+    private final FlightDetailsFactory flightDetailsMother;
 
-    public ItineraryFactory(FlightDetailsMother flightDetailsMother) {
+    public ItineraryFactory(FlightDetailsFactory flightDetailsMother) {
         this.flightDetailsMother = flightDetailsMother;
     }
 

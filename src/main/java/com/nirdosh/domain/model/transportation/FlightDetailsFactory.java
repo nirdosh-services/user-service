@@ -7,8 +7,8 @@ import java.util.Arrays;
 import java.util.List;
 
 @Component
-public class FlightDetailsMother {
-    public FlightDetailsMother() {
+public class FlightDetailsFactory {
+    public FlightDetailsFactory() {
     }
 
     public List<FlightDetail> getOutboundFlight() {
