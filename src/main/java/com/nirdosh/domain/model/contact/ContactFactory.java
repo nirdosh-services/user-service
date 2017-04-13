@@ -17,7 +17,6 @@ public class ContactFactory {
 
     public Contact createContact() {
         Contact contact = new Contact(telephoneMother.getTelephone(), addressMother.getAddresse());
-
         return contact;
     }
 }

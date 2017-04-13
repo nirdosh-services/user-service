@@ -8,6 +8,6 @@ public class NameFactory {
     }
 
     public Name getName() {
-        return new Name("nirdosh", "parmarm", "nikunjkumar");
+        return new Name("nirdosh", "parmar", "nikunjkumar");
     }
 }

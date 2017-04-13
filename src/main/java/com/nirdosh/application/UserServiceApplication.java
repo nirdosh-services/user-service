@@ -28,7 +28,7 @@ public class UserServiceApplication implements CommandLineRunner {
     private final NameFactory nameFactory;
     private final PaymentInfoFactory paymentInfoFactory;
     private final FtpAccountFactory ftpAccountFactory;
-    private final ContactFactory contactMother ;
+    private final ContactFactory contactFactory;
     private UserRepo userRepo;
 
     @Autowired
@@ -42,7 +42,7 @@ public class UserServiceApplication implements CommandLineRunner {
         this.nameFactory = nameFactory;
         this.paymentInfoFactory = paymentInfoFactory;
         this.ftpAccountFactory = ftpAccountFactory;
-        this.contactMother = contactFactory;
+        this.contactFactory = contactFactory;
         this.userRepo = userRepo;
     }
     
@@ -58,7 +58,7 @@ public class UserServiceApplication implements CommandLineRunner {
                                         nameFactory.getName(),
                                         new Date(),
                                         Gender.MALE,
-                                        contactMother.createContact(),
+                                        contactFactory.createContact(),
                                         null,
                                         null,
                                         ftpAccountFactory.getFtpAccounts(),
